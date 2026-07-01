@@ -5,7 +5,8 @@ class Tile:
         self.color = color
 
 class Game:
-    grid: dict[tuple[int, int], Tile | None] = {}
+    def __init__(self) -> None:
+        self.grid: dict[tuple[int, int], Tile | None] = {}
 
     def add_tile(self, x: int, y: int, color: bool):
         self.grid[(x, y)] = Tile(color)
